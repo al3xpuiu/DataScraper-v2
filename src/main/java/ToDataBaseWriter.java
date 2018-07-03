@@ -1,11 +1,15 @@
 import contact.Contact;
 
 import java.sql.*;
+import java.util.Queue;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 /**
  * Created by Loky on 21/04/2018.
  */
 public class ToDataBaseWriter {
+
+    private static Queue<Contact> contactsQueue = new ConcurrentLinkedQueue<>(  );
 
     public static void write(Contact contact) {
 
@@ -33,5 +37,9 @@ public class ToDataBaseWriter {
             System.out.println( contact );
         }
 
+    }
+
+    public static Queue<Contact> getContactsQueue() {
+        return contactsQueue;
     }
 }

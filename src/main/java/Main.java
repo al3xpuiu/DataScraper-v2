@@ -55,8 +55,8 @@ public class Main {
 
             scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
             scheduledExecutorService.scheduleWithFixedDelay( () -> {
-                while (!ContactsQueue.getInstance().getContactsQueue().isEmpty())
-                    ToDataBaseWriter.write( ContactsQueue.getInstance().getContactsQueue().poll() );
+                while (!ToDataBaseWriter.getContactsQueue().isEmpty())
+                    ToDataBaseWriter.write( ToDataBaseWriter.getContactsQueue().poll() );
 
             }, 10000, 100, TimeUnit.MILLISECONDS );
 

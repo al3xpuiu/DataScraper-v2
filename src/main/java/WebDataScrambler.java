@@ -161,7 +161,7 @@ public class WebDataScrambler {
                         return ContactFactory.getContact( clientData );
                     } )
                     .forEach( c -> {
-                        ContactsQueue.getInstance().getContactsQueue().offer( c );
+                        ToDataBaseWriter.getContactsQueue().offer( c );
                     } );
         }
     }
