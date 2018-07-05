@@ -18,7 +18,7 @@ import java.util.*;
 /**
  * Created by Loky on 19/04/2018.
  */
-public class WebDataScrambler {
+public class WebDataScraper {
 
     private List<Element> elements;
 
@@ -29,7 +29,7 @@ public class WebDataScrambler {
     private String contactWebAddressCSSQuery = "example";
 
 
-    public WebDataScrambler() {
+    public WebDataScraper() {
         this.elements = new ArrayList<>();
     }
 

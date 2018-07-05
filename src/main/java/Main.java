@@ -1,15 +1,6 @@
-import org.jsoup.HttpStatusException;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-
-import javax.net.ssl.SSLHandshakeException;
 import java.io.*;
-import java.net.InetAddress;
-import java.net.SocketTimeoutException;
-import java.net.UnknownHostException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
@@ -64,7 +55,7 @@ public class Main {
 
                 long start2 = System.currentTimeMillis();
 
-                new WebDataScrambler( ).dataScramble( urls );
+                new WebDataScraper( ).dataScramble( urls );
 
                 long end2 = (System.currentTimeMillis() - start2) / 1000;
                 System.out.println( "Stage finished in : " + end2 / 60 + " minutes" );
